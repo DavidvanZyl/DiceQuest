@@ -1,0 +1,74 @@
+.CharacterData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 500px;
+  position: relative;
+
+  &__background {
+    background-color: silver;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__main {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__name {
+      font-size: 18px;
+      color: black;
+    }
+
+    &__dice {
+      display: flex;
+    }
+  }
+
+  &__attackButton {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+    border-radius: 50%;
+    background-color: darkred;
+    border: 5px solid silver;
+    box-shadow: inset black 0px 0px 11px 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    outline: none;
+
+    &:active {
+      background-color: #680000;
+      box-shadow: inset black 0px 0px 15px 2px;
+    }
+  }
+
+  &:nth-of-type(1) {
+    .CharacterData__main {
+      padding-right: 60px;
+      padding-left: 50px;
+    }
+    .CharacterData__background {
+      transform: skewX(30deg);
+    }
+  }
+
+  &:nth-of-type(2) {
+    .CharacterData__main {
+      padding-left: 60px;
+      padding-right: 50px;
+    }
+    .CharacterData__background {
+      transform: skewX(-30deg);
+    }
+  }
+}

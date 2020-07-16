@@ -1,0 +1,74 @@
+.Dice {
+  padding: 8px;
+  margin: 8px;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__dotSet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__dot {
+    display: block;
+    visibility: hidden;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: black;
+  }
+
+  &.one {
+    .Dice__dot.center {
+      visibility: visible;
+    }
+  }
+
+  &.two,
+  &.three {
+    .Dice__dot.one,
+    .Dice__dot.six {
+      visibility: visible;
+    }
+  }
+
+  &.three {
+    .Dice__dot.center {
+      visibility: visible;
+    }
+  }
+
+  &.four,
+  &.five {
+    .Dice__dot.one,
+    .Dice__dot.three,
+    .Dice__dot.four,
+    .Dice__dot.six {
+      visibility: visible;
+    }
+  }
+
+  &.five {
+    .Dice__dot.center {
+      visibility: visible;
+    }
+  }
+
+  &.six {
+    .Dice__dot.one,
+    .Dice__dot.two,
+    .Dice__dot.three,
+    .Dice__dot.four,
+    .Dice__dot.five,
+    .Dice__dot.six {
+      visibility: visible;
+    }
+  }
+}

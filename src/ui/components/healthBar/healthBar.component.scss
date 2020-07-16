@@ -1,0 +1,25 @@
+.Health {
+  height: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  width: 80%;
+  max-width: 250px;
+  overflow: hidden;
+  background-color: dimgrey;
+  color: white;
+
+  &__healthBar {
+    height: 100%;
+    background-color: darkred;
+    align-self: flex-start;
+  }
+
+  &__healthValue {
+    position: absolute;
+    margin: 0;
+  }
+}

@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #030224;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Toastify {
+  position: absolute;
+
+  &__toast {
+    padding: 32px;
+    background: slategrey;
+    border: 5px solid darkslategray;
+    box-shadow: white 1px 1px;
+  }
+
+  &__close-button {
+    display: none;
+  }
+}
+
+.Toastify__toast--success,
+.Toastify__toast--error {
+  font-size: 50px;
+  font-weight: bold;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 150px;
+}
+
+.Toastify__toast--success {
+  color: green;
+}
+
+.Toastify__toast--error {
+  color: red;
+}
+
+@keyframes Toastify__trackProgress {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.Toastify__progress-bar {
+  animation: Toastify__trackProgress linear 1;
+}
+
+* {
+  box-sizing: border-box;
+}
